@@ -9,15 +9,27 @@ class SearchBooks extends React.Component {
     showingBooks: []
   }
 
+  /**
+  * @description Update the state based on user inputs
+  * @param {object} event - The event object
+  */
   handleChange = (event) => {
     this.updateQuery(event.target.value)
     this.updateShowingBooks(event.target.value)
   }
 
+  /**
+  * @description Update this.state.query
+  * @param {string} query
+  */
   updateQuery = (query) => {
     this.setState({query})
   }
 
+  /**
+  * @description Update this.state.showingBooks
+  * @param {string} query
+  */
   updateShowingBooks = (query) => {
 
     const {books} = this.props

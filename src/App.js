@@ -16,6 +16,11 @@ class BooksApp extends React.Component {
     })
   }
 
+  /**
+  * @description Move a book between shelves
+  * @param {object} book - the book object
+  * @param {string} shelf - contains one of ["wantToRead", "currentlyReading", "read"]
+  */
   moveBook = (book, shelf) => {
 
     if ('none' === book.shelf) {
