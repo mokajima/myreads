@@ -4,7 +4,7 @@ import Shelf from './Shelf'
 
 class BooksList extends React.Component {
   render() {
-    const {books} = this.props
+    const {books, moveBook} = this.props
 
     return (
       <div className="list-books">
@@ -16,14 +16,17 @@ class BooksList extends React.Component {
             <Shelf
               books={books.filter((book) => 'currentlyReading' === book.shelf)}
               title="Currently Reading"
+              moveBook={moveBook}
             />
             <Shelf
               books={books.filter((book) => 'wantToRead' === book.shelf)}
               title="Want to Read"
+              moveBook={moveBook}
             />
             <Shelf
               books={books.filter((book) => 'read' === book.shelf)}
               title="Read"
+              moveBook={moveBook}
             />
           </div>
         </div>
