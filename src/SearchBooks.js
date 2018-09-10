@@ -77,6 +77,7 @@ class SearchBooks extends React.Component {
               placeholder="Search by title or author"
               value={this.state.query}
               onChange={this.handleChange}
+              autoFocus
             />
           </div>
         </div>
