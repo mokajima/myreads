@@ -1,6 +1,6 @@
 # MyReads
 
-MyReads is a web application that allows you to select and categorize books you have read, are currently reading, or want to read.
+MyReads is a web application that allows users to select and categorize books into a virtual bookshelf.
 
 ## Install
 
