@@ -5,18 +5,24 @@ body {
   line-height: 1.5;
 }
 body, .app {
-  background: white;
+  background: #333;
 }
 
 /* main page */
 
 .list-books-title {
-  padding: 10px 0;
   background: #2e7c31;
   text-align: center;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .list-books-title h1 {
+  font-size: 18px;
   font-weight: 400;
+  letter-spacing: 10px;
+  text-transform: uppercase;
   margin: 0;
   color: white;
 }
@@ -58,7 +64,7 @@ body, .app {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 28px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   font-size: 0;
 }
 
