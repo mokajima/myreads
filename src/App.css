@@ -11,17 +11,18 @@ body, .app {
 /* main page */
 
 .list-books-title {
-  background: #2e7c31;
+  background: linear-gradient(to bottom, #2e7c31, #246326);
   text-align: center;
   height: 60px;
   line-height: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .list-books-title h1 {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 5px;
+  text-shadow: 0 -2px 0 #1b491c;
   text-transform: uppercase;
   margin: 0;
   color: white;
@@ -218,6 +219,9 @@ body, .app {
 }
 
 @media (min-width: 768px) {
+  .list-books-title {
+    margin-bottom: 50px;
+  }
   .list-books-title h1 {
     letter-spacing: 10px;
   }
