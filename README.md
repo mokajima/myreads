@@ -9,4 +9,4 @@ MyReads is a web application that allows users to select and categorize books in
 
 ## Acknowledgements
 
-- Udacity - provided the HTML and CSS markup
+- Udacity - provided the HTML markup
