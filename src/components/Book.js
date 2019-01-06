@@ -31,9 +31,9 @@ const Book = (props) => {
         </div>
       </div>
       <div className="book-title">{book.name}</div>
-      {book.authors &&
+      {book.authors && (
         <div className="book-authors">{book.authors.join(', ')}</div>
-      }
+      )}
     </div>
   )
 }
