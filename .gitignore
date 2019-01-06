@@ -2,6 +2,12 @@ node_modules
 yarn.lock
 .DS_Store
 
+# Firebase
+.firebase
+
+# Production
+build
+
 # Vim
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
