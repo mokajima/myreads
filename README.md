@@ -4,6 +4,11 @@ MyReads is a web application that allows users to select and categorize books in
 
 ![Screenshot](https://mokajima.github.io/portfolio/images/myreads.jpg)
 
+## Dependencies
+
+- [React](https://github.com/facebook/react)
+- [Create React App](https://github.com/facebook/create-react-app)
+
 ## Install
 
 * install all project dependencies with `npm install`
