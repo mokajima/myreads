@@ -28,10 +28,9 @@ class BooksApp extends React.Component {
 
       // Add the book
       book.shelf = shelf
-      this.setState((prevState) => {
-        prevState.books.push(book)
-        return prevState
-      })
+      this.setState((prevState) => ({
+        books: prevState.books.concat(book)
+      }))
 
     } else {
 
