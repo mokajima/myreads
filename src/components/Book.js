@@ -7,11 +7,21 @@ const Book = (props) => {
   return (
     <div className="book">
       <div className="book-top">
-        {book.imageLinks &&
-          <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail}` }}></div>
-        }
+        {book.imageLinks && (
+          <div
+            className="book-cover"
+            style={{
+              width: 128,
+              height: 193,
+              backgroundImage: `url(${book.imageLinks.thumbnail}`
+            }}
+          />
+        )}
         <div className="book-shelf-changer">
-          <select value={book.shelf} onChange={(event) => props.moveBook(book, event.target.value)}>
+          <select
+            value={book.shelf}
+            onChange={(event) => props.moveBook(book, event.target.value)}
+          >
             <option value="move" disabled>Move to...</option>
             <option value="currentlyReading">Currently Reading</option>
             <option value="wantToRead">Want to Read</option>
