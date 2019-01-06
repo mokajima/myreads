@@ -33,28 +33,39 @@ class SearchBooks extends React.Component {
   */
   updateShowingBooks = (query) => {
 
-    const {books} = this.props
+    // Get all books in bookshelves
+    const { books } = this.props
 
-    BooksAPI.search(query).then((showingBooks) => {
+    // Get books to show
+    BooksAPI.search(query)
+      .then((showingBooks) => {
 
-      if (Array.isArray(showingBooks)) {
+        // Books are found
+        if (Array.isArray(showingBooks)) {
 
-        this.setState({
-          showingBooks: showingBooks.map((b) => {
-            for (let i = 0, len = books.length; i < len; i++) {
-              if (b.id === books[i].id) {
-                return books[i]
+          this.setState({
+            showingBooks: showingBooks.map((b) => {
+              for (let i = 0, len = books.length; i < len; i++) {
+                if (b.id === books[i].id) {
+
+                  // Return books[i] instead of b
+                  // because books[i] has a shelf property
+                  // but b doesn't
+                  return books[i]
+                }
               }
-            }
-            b.shelf = 'none'
-            return b
+
+              // If books[i] is not found, b is not in a shelf
+              b.shelf = 'none'
+              return b
+            })
           })
-        })
 
-      } else {
-        this.setState({showingBooks: []})
-      }
+        } else {
 
+          // No books are found
+          this.setState({showingBooks: []})
+        }
     })
   }
 
