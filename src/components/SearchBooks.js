@@ -66,7 +66,7 @@ class SearchBooks extends React.Component {
           // No books are found
           this.setState({showingBooks: []})
         }
-    })
+      })
   }
 
   render() {
