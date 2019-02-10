@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import Book from './Book'
 import * as BooksAPI from '../utils/BooksAPI'
 
@@ -72,6 +73,9 @@ class SearchBooks extends React.Component {
   render() {
     return (
       <div className="search-books">
+        <Helmet>
+          <title>Search | MyReads</title>
+        </Helmet>
         <div className="search-books-bar">
           <Link className="close-search" to="/">Close</Link>
           <div className="search-books-input-wrapper">

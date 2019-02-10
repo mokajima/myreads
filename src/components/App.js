@@ -1,5 +1,6 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
+import Helmet from 'react-helmet'
 import * as BooksAPI from '../utils/BooksAPI'
 import BooksList from './BooksList'
 import SearchBooks from './SearchBooks'
@@ -50,6 +51,9 @@ class BooksApp extends React.Component {
 
     return (
       <div className="app">
+        <Helmet>
+          <title>MyReads</title>
+        </Helmet>
         <Route exact path="/" render={() => (
           <BooksList books={books} moveBook={this.moveBook} />
         )} />
