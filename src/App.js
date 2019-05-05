@@ -24,23 +24,16 @@ class BooksApp extends React.Component {
   * @param {string} shelf - contains one of ["wantToRead", "currentlyReading", "read"]
   */
   moveBook = (book, shelf) => {
+    book.shelf = shelf
 
-    if ('none' === book.shelf) {
-
-      // Add the book
-      book.shelf = shelf
-      this.setState((prevState) => ({
+    if (book.shelf === 'none') { // Add the book
+      this.setState(prevState => ({
         books: prevState.books.concat(book)
       }))
-
-    } else {
-
-      // Move the book
-      book.shelf = shelf
-      this.setState((prevState) => ({
+    } else { // Move the book
+      this.setState(prevState => ({
         books: prevState.books.map((b) => book.id === b.id ? book : b)
       }))
-
     }
 
     BooksAPI.update(book, shelf)
