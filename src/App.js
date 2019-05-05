@@ -1,9 +1,9 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
 import Helmet from 'react-helmet'
-import * as BooksAPI from '../utils/BooksAPI'
-import BooksList from './BooksList'
-import SearchBooks from './SearchBooks'
+import * as BooksAPI from './utils/BooksAPI'
+import BooksList from './components/BooksList'
+import SearchBooks from './components/SearchBooks'
 import './App.css'
 
 class BooksApp extends React.Component {
