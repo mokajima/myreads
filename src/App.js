@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route} from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import * as BooksAPI from './utils/BooksAPI'
 import BooksList from './components/BooksList'
@@ -47,12 +47,15 @@ class BooksApp extends React.Component {
         <Helmet>
           <title>MyReads</title>
         </Helmet>
-        <Route exact path="/" render={() => (
-          <BooksList books={books} moveBook={this.moveBook} />
-        )} />
-        <Route path="/search" render={() => (
-          <SearchBooks books={books} moveBook={this.moveBook} />
-        )} />
+        <Switch>
+          <Route exact path="/" render={() => (
+            <BooksList books={books} moveBook={this.moveBook} />
+          )} />
+          <Route path="/search" render={() => (
+            <SearchBooks books={books} moveBook={this.moveBook} />
+          )} />
+          <Redirect to="/" />
+        </Switch>
       </div>
     )
   }
