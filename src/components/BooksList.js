@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Shelf from './Shelf'
+import './BooksList.css'
 
 const BooksList = (props) => {
   const {books, moveBook} = props
