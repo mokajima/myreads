@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Book from './Book'
 import * as BooksAPI from '../utils/BooksAPI'
+import './SearchBooks.css'
 
 class SearchBooks extends React.Component {
   state = {
