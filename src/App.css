@@ -8,18 +8,6 @@ body, .app {
   background: #333;
 }
 
-/* book cover */
-
-.book-cover {
-  background: #eee no-repeat center / cover;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-}
-.book-cover-title {
-  padding: 20px 10px 0;
-  text-align: center;
-  font-size: 0.8em;
-}
-
 /* books grid */
 
 .books-grid {
